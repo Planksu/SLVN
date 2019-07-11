@@ -1,2 +1,2 @@
-# slvn-collection
+# SLVN- collection
 Collection of some of my custom datastructures and modular classes
