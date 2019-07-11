@@ -25,7 +25,7 @@ workspace "SLVN"
 
 	configuration "windows"
 		characterset "MBCS"
-		systemversion "10.0.16299.0"
+		systemversion "10.0.17763.0"
 		defines {
 			"_CRT_SECURE_NO_WARNINGS",
 			"WIN32_LEAN_AND_MEAN"
