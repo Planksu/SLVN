@@ -6,8 +6,11 @@ class slvn_hashtable_node
 public:
 	slvn_hashtable_node(void* d, slvn_hashtable_node* previous)
 	{
-		previous->next = this;
-		data = data;
+		if (previous != NULL)
+		{
+			previous->next = this;
+		}
+		data = d;
 		next = NULL;
 	}
 

@@ -33,7 +33,7 @@ workspace "SLVN"
 
 project "SLVN"
 	targetname "slvn"
-	kind "SharedLib"
+	kind "ConsoleApp"
 	-- kind "WindowedApp"
 	language "C++"
 	files { "./slvn/include/**.h", "./slvn/src/**.cpp", "./slvn/src/**.h" }
