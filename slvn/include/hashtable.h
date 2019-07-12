@@ -7,7 +7,7 @@
 
 #include "hashtable_node.h"
 
-#define GET_VAR_NAME(Variable) (#Variable)
+
 
 class slvn_hashtable
 {
@@ -19,9 +19,9 @@ private:
 
 public:
 	slvn_hashtable(float fr, int initial_len);
-	void* find(uint32_t hashed_index);
-	void insert(void* data);
-	uint32_t hash(void* insert_data);
+	void* find(void* insert_data, char* data_identifier);
+	void insert(void* insert_data, char* data_identifier);
+	uint32_t hash(void* insert_data, char* data_identifier);
 
 
 private:
