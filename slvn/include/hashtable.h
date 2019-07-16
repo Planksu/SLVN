@@ -1,33 +1,28 @@
 #ifndef SLVN_HASHTABLE_H
 #define SLVN_HASHTABLE_H
 
-#include <cstdint>
-#include <cstdlib>
-#include <string>
+#include <stdint.h>
+#include <stdlib.h>
 
-#include "hashtable_node.h"
-
-
-
-class slvn_hashtable
+typedef struct
 {
-private:
+	void* data;
+	void* next;
+} slvn_hashtable_node;
+
+typedef struct
+{
 	float fillratio;
 	int alloc_len;
 	int used_len;
 	slvn_hashtable_node** data;
 
-public:
-	slvn_hashtable(float fr, int initial_len);
-	void* find(void* insert_data, char* data_identifier);
-	void insert(void* insert_data, char* data_identifier);
-	uint32_t hash(void* insert_data, char* data_identifier);
+} slvn_hashtable;
 
+void allocate_mem(slvn_hashtable* ht);
+void insert(slvn_hashtable* ht, void* insert_data);
+void* find(slvn_hashtable* ht, void* insert_data);
+uint32_t hash(slvn_hashtable* ht, void* insert_data);
 
-private:
-	void allocate_mem();
-	void update_fillratio();
-
-};
 
 #endif

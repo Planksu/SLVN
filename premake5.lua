@@ -35,8 +35,8 @@ project "SLVN"
 	targetname "slvn"
 	kind "ConsoleApp"
 	-- kind "WindowedApp"
-	language "C++"
-	files { "./slvn/include/**.h", "./slvn/src/**.cpp", "./slvn/src/**.h" }
+	language "C"
+	files { "./slvn/include/**.h", "./slvn/src/**.c", "./slvn/src/**.h" }
 
 	defines {"AJP_BUILD_DLL"}
 	links {}
