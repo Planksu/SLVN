@@ -25,31 +25,31 @@ workspace "SLVN"
 
 	configuration "windows"
 		characterset "MBCS"
-		systemversion "10.0.17763.0"
+		systemversion "10.0.17134.0"
 		defines {
 			"_CRT_SECURE_NO_WARNINGS",
 			"WIN32_LEAN_AND_MEAN"
 		}
 
-project "SLVN"
-	targetname "slvn"
+project "slvn_hashtable"
+	targetname "slvn_hashtable"
 	kind "ConsoleApp"
 	-- kind "WindowedApp"
 	language "C"
-	files { "./slvn/include/**.h", "./slvn/src/**.c", "./slvn/src/**.h" }
+	files { "./slvn/hashtable/include/**.h", "./slvn/hashtable/src/**.c", "./slvn/hashtable/src/**.h" }
 
-	defines {"AJP_BUILD_DLL"}
+	defines {}
 	links {}
 	configuration "x64"
 		libdirs {}
 		
 	configuration "x86"
 		libdirs {}
-		
+	
 	configuration "not macosx"
-		includedirs {"./slvn/include"}
+		includedirs {"./slvn/hashtable/include"}
 	configuration "macosx"
-		sysincludedirs {"./slvn/include"}
+		sysincludedirs {"./slvn/hashtable/include"}
 
 	configuration "windows"
 		defines {}
@@ -65,6 +65,47 @@ project "SLVN"
 		defines {}
 
 	configuration "android"
+		defines {}
+
+	configuration "Debug"
+		defines {"DEBUG"}
+		symbols "On"	
+
+	configuration "Release"
+		defines {"NDEBUG"}
+		optimize "On"
+
+
+project "slvn_window"
+	targetname "slvn_window"
+	kind "ConsoleApp"
+	-- kind "WindowedApp"
+	language "C"
+	links {"glfw3"}
+	files { "./slvn/window/include/**.h", "./slvn/window/src/**.c", "./slvn/window/src/**.h" }
+
+	defines {}
+	links {}
+	configuration "x64"
+		libdirs {}
+		
+	configuration "x86"
+		libdirs {}
+		
+	configuration "not macosx"
+		includedirs {"./slvn/window/include", "./slvn/window/libs/glfw/include"}
+		libdirs {"./slvn/window/libs/glfw/lib-vc2019/"}
+	configuration "macosx"
+		sysincludedirs {"./slvn/window/include", "./slvn/window/libs/glfw/include"}
+
+	configuration "windows"
+		defines {}
+		links {}
+
+	configuration "not windows"
+		defines {}
+
+	configuration "linux"
 		defines {}
 
 	configuration "Debug"
