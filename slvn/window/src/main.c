@@ -5,12 +5,15 @@
 
 int main(int argc, char** argv)
 {
-	if (!glfwInit())
-	{
+	slvn_window window = { 0 };
+	start(&window);
+	create_window(&window, 640, 480);
 
+	while (!glfwWindowShouldClose(window.glfw_window))
+	{
+		update(&window);
 	}
 
-
-	glfwTerminate();
+	destroy(&window);
 	return 0;
 }
