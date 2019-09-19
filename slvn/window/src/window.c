@@ -80,7 +80,7 @@ void create_window(slvn_window* window, int width, int height)
 void update(slvn_window* window)
 {
 	glfwPollEvents();
-	glfwSwapBuffers(window);
+	glfwSwapBuffers(window->glfw_window);
 	window->time = glfwGetTime();
 }
 
