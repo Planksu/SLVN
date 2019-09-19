@@ -9,15 +9,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\slvn\window\include\window.h">
+    <ClInclude Include="..\SLVN\include\core.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SLVN\include\debug.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SLVN\include\window.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\slvn\window\src\main.c">
+    <ClCompile Include="..\SLVN\src\debug.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\slvn\window\src\window.c">
+    <ClCompile Include="..\SLVN\src\window.c">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
