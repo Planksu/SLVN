@@ -39,7 +39,7 @@
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SLVN</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -315,10 +315,12 @@
   <ItemGroup>
     <ClInclude Include="..\SLVN\include\core.h" />
     <ClInclude Include="..\SLVN\include\debug.h" />
+    <ClInclude Include="..\SLVN\include\thread.h" />
     <ClInclude Include="..\SLVN\include\window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\SLVN\src\debug.c" />
+    <ClCompile Include="..\SLVN\src\thread.c" />
     <ClCompile Include="..\SLVN\src\window.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
