@@ -8,11 +8,11 @@ SLVN_RESULT slvn_thread_create(slvn_thread** thread, void* entry)
 	}
 
 	*thread = CreateThread(	NULL,
-									0,
-									entry,
-									NULL,
-									0,
-									NULL);
+							0,
+							entry,
+							NULL,
+							0,
+							NULL);
 
 	if (*thread == NULL)
 	{
