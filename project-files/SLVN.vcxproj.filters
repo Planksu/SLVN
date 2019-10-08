@@ -15,6 +15,9 @@
     <ClInclude Include="..\SLVN\include\debug.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="..\SLVN\include\input.h">
+      <Filter>include</Filter>
+    </ClInclude>
     <ClInclude Include="..\SLVN\include\thread.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -24,6 +27,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\SLVN\src\debug.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SLVN\src\input.c">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\SLVN\src\thread.c">
