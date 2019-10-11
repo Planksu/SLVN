@@ -18,6 +18,9 @@
     <ClInclude Include="..\SLVN\include\input.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="..\SLVN\include\pseudorandom.h">
+      <Filter>include</Filter>
+    </ClInclude>
     <ClInclude Include="..\SLVN\include\thread.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -30,6 +33,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\SLVN\src\input.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SLVN\src\pseudorandom.c">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\SLVN\src\thread.c">
