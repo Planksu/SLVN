@@ -18,5 +18,6 @@
 #define SLVN_RESULT int
 #define SLVN_OK 0
 #define SLVN_UNEXPECTED_RESULT -1
+#define SLVN_TRUE 
 
 #endif

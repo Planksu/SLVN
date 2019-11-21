@@ -76,7 +76,7 @@ typedef enum
 } SLVN_KEYCODE;
 
 SLVN_EXTERN_BEGIN
-SLVN_RESULT		SLVN_API	slvn_input_get_async_key(SLVN_KEYCODE keycode);
+		SLVN_API	slvn_input_get_async_key(SLVN_KEYCODE keycode);
 SLVN_EXTERN_END
 
 
